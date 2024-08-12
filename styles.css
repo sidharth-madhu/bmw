@@ -1,0 +1,432 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f0f0f0; /* Slightly lighter gray for a modern look */
+    overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #0033a0; /* BMW blue */
+    text-align: center;
+    z-index: 200;
+}
+
+.loading-text span {
+    font-size: 50px;
+    margin-left: 5px;
+    display: inline-block;
+    font-family: 'Arial', sans-serif;
+    color: #ffffff; /* White text for contrast */
+    font-weight: bold; /* Make text bold for a stronger presence */
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px; /* Reduced height for a sleeker look */
+    width: 100%;
+    background-color: #000000; /* Black background for header */
+    z-index: 100;
+    border-bottom: 4px solid #0033a0; /* BMW blue border at the bottom */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for a polished look */
+}
+
+.header-logo {
+    margin-left: 30px; /* Adjusted margin for better alignment */
+    font-size: 24px; /* Reduced font size for a modern look */
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: #ffffff; /* White text for logo */
+}
+
+.content {
+    position: relative;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    flex-direction: column;
+    padding-top: 80px; /* Added padding to avoid overlap with the sticky header */
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+}
+
+/* Adjust the scrolling speed by changing the animation duration */
+.image-reel,
+.image-reel-second {
+    margin-bottom: 40px; /* Reduced margin for a cleaner look */
+    display: flex;
+    width: auto;
+    height: 300px;
+    align-items: center;
+    overflow: hidden;
+    animation: reel-animation 25s linear infinite; /* Faster scrolling speed */
+}
+
+@keyframes reel-animation {
+    from {
+        transform: translateX(40%); 
+    }
+
+    to {
+        transform: translateX(-40%);
+    }
+}
+
+
+.content-text,
+.content-text-second {
+    font-size: 45px; /* Reduced font size for a more balanced look */
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    color: #000000; /* Black text for main content */
+    font-weight: bold; /* Bold text for emphasis */
+}
+
+/* @keyframes reel-animation {
+    from {
+        transform: translateX(40%);
+    }
+
+    to {
+        transform: translateX(-40%);
+    }
+} */
+
+.image-reel .image {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 200px; /* Adjusted height for better proportions */
+    margin-left: 15px; /* Adjusted margin for spacing */
+    margin-right: 15px; /* Adjusted margin for spacing */
+    border: 4px solid #0033a0; /* BMW blue border */
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Slightly enhanced shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.4s ease-in-out; /* Smoother transitions */
+}
+
+.image-reel .image:hover {
+    transform: scale(1.07); /* Slight zoom effect on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6); /* Enhanced shadow effect on hover */
+}
+
+.image-reel .img0 {
+    background-image: url('https://media.istockphoto.com/id/1435226078/photo/front-of-a-white-bmw-m4-parked-on-a-street-with-trees-in-the-background.jpg?s=612x612&w=0&k=20&c=l1IupUrh-_Zbcse-hDkaUAh-qMD82hJspXjnN0IBZlg=');
+}
+
+.image-reel .img1 {
+    background-image: url('https://images.pexels.com/photos/100653/pexels-photo-100653.jpeg?cs=srgb&dl=pexels-mikebirdy-100653.jpg&fm=jpg');
+}
+
+.image-reel .img2 {
+    background-image: url('https://images.unsplash.com/photo-1580273916550-e323be2ae537?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D');
+}
+
+.image-reel .img3 {
+    background-image: url('https://t3.ftcdn.net/jpg/04/35/92/40/360_F_435924070_A2n5ZyQUF7nCRsYZj6SX1SAYOn5sggFh.jpg');
+}
+
+.image-reel .img4 {
+    background-image: url('https://bsmedia.business-standard.com/_media/bs/img/article/2024-01/11/full/1704993456-7402.jpg?im=FeatureCrop,size=(826,465)');
+}
+
+.image-reel .img5 {
+    background-image: url('https://wallpapers.com/images/featured/bmw-d942a3zxd8i3uqc8.jpg');
+}
+
+.image-reel .img6 {
+    background-image: url('https://i.pinimg.com/236x/fa/4f/61/fa4f619e779a48c172fa87a90a241f2d.jpg');
+}
+
+.image-reel .img7 {
+    background-image: url('https://akm-img-a-in.tosshub.com/businesstoday/images/story/202005/861a4abe_2fec_44aa_aa21_c79ceca1cdc3_660_080520125004.jpg');
+}
+
+.image-reel .img8 {
+    background-image: url('https://images.pexels.com/photos/707046/pexels-photo-707046.jpeg?cs=srgb&dl=pexels-trace-707046.jpg&fm=jpg');
+}
+
+.image-reel .img9 {
+    background-image: url('https://i2-prod.mirror.co.uk/incoming/article28360688.ece/ALTERNATES/n615/0_P90414901_highRes_bmw-m4-competition-c.jpg');
+}
+
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    flex-direction: row;
+    padding: 0 20px; /* Added padding for better spacing */
+    background-color: #f5f5f5; /* Light background for contrast */
+    border-top: 2px solid #0033a0; /* BMW blue border at the top */
+    border-bottom: 2px solid #0033a0;
+    /* padding-top: 10px;
+    padding-bottom: 10px; */
+    padding: 20px;
+}
+
+.about-content {
+    width: 100%;
+    padding: 0 30px; /* Adjusted padding for better spacing */
+}
+
+.about-heading {
+    font-size: 40px; /* Slightly smaller heading for a modern look */
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #0033a0; /* BMW blue text */
+}
+
+.about-description {
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin-bottom: 30px; /* Reduced margin for a cleaner look */
+    color: #333333; /* Dark gray text for better readability */
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #0033a0; /* BMW blue for button */
+    color: #ffffff; /* White text for button */
+    font-size: 16px; /* Slightly smaller font size for button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #00247d; /* Darker blue on hover */
+}
+
+.about-image {
+    width: 30%;
+    height: 100%;
+    background-image: url('https://static.vecteezy.com/system/resources/previews/019/956/127/original/bmw-transparent-bmw-free-free-png.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.video-container {
+    position: relative; /* Ensure the container is the positioning context for the heading */
+    width: 80%; /* Adjust width to make the video smaller */
+    max-width: 800px; /* Maximum width for the container */
+    margin: 20px auto; /* Center container with margin */
+    padding: 10px; /* Padding around the video */
+    background-color: #ffffff; /* White background for contrast */
+    border: 4px solid #0033a0; /* BMW blue border */
+    border-radius: 10px; /* Slightly rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    opacity: 1;
+    transform: scale(1);
+    
+}
+
+
+
+
+.video-heading {
+    position: absolute; /* Position it relative to the container */
+    top: -50px; /* Adjust this value to move the heading up or down */
+    left: 50%;
+    transform: translateX(-50%); /* Center the heading horizontally */
+    font-size: 36px; /* Adjust font size as needed */
+    font-family: 'Arial', sans-serif; /* Use a clean, modern font */
+    font-weight: bold;
+    color: #0033a0; /* BMW blue color */
+    margin: 0;
+    text-align: center; /* Center the heading text */
+    z-index: 10; /* Ensure heading appears above the border */
+}
+
+
+.video-container video {
+    width: 100%; /* Make video responsive within the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners for the video */
+}
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+/* Navbar Link Styles */
+.navbar ul li a {
+    text-decoration: none;
+    color: #0033a0; /* BMW blue */
+    font-size: 16px;
+    font-weight: 700;
+    position: relative; /* Required for positioning the underline */
+    padding-bottom: 5px; /* Space for the underline */
+    transition: color 0.3s ease, border-bottom 0.3s ease; /* Smooth transitions */
+}
+
+/* Underline Hover Effect */
+.navbar ul li a:hover {
+    color: #0033a0; /* Maintain the blue color on hover */
+}
+
+/* Underline Effect */
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px; /* Thickness of the underline */
+    background-color: #0033a0; /* BMW blue underline */
+    transform: scaleX(0); /* Initially hide the underline */
+    transition: transform 0.3s ease; /* Smooth underline transition */
+}
+
+.navbar ul li a:hover::after {
+    transform: scaleX(1); /* Show the underline on hover */
+}
+
+
+/* Footer Styles */
+.footer {
+    background-color: #000000; /* Black background for footer */
+    color: #ffffff; /* White text color */
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 4px solid #0033a0; /* BMW blue border at the top */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for separation */
+    margin-top: 50px;
+}
+
+.footer-content {
+    width: 80%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-logo {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px; /* Spacing between links */
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #ffffff; /* White text for links */
+    font-size: 16px;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #0033a0; /* BMW blue on hover */
+}
+
+.footer-social {
+    margin: 20px 0;
+}
+
+.footer-social a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.footer-social img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+}
+
+/* Ensure the section containing the heading is centered */
+div > h1.bmw {
+    text-align: center; /* Center align the text */
+    font-size: 4em; /* Increase the font size */
+    color: #0033a0; /* BMW blue color */
+    font-family: 'Arial', sans-serif; /* Modern, clean font */
+    font-weight: bold;
+    text-transform: uppercase; /* Uppercase text for impact */
+    margin: 20px 0; /* Add margin for spacing above and below */
+    padding: 10px; /* Add padding around the text */
+    background: rgba(255, 255, 255, 0.8); /* Slightly opaque white background */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    display: inline-block; /* Make heading only as wide as its content */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.bmw1{
+    display: flex;
+    justify-content: center;
+}
+
