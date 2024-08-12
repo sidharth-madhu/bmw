@@ -56,7 +56,7 @@ timeline.from(".main-text", {
 // First image reel animation
 timeline.from(".image-reel", {
     opacity: 0,
-    duration: 1.5
+    duration: 0
 });
 
 // About section animations
@@ -136,3 +136,21 @@ gsap.from(".video-container", {
     ease: "power2.out"
 });
 
+
+// Ensure GSAP and ScrollTrigger are registered
+gsap.registerPlugin(ScrollTrigger);
+
+// Ensure the .car image starts off-screen to the right
+gsap.set(".car", { x: "100vw" });
+
+// Animation for the .car image
+gsap.to(".car", {
+    scrollTrigger: {
+        trigger: ".car",
+        start: "top 106%", // Start animation when the top of .car is 80% from the top of the viewport
+        end: "bottom 20%", // End animation when the bottom of .car is 20% from the top of the viewport
+        scrub: true, // Smooth scrolling animation
+    },
+    x: "-100vw", // Move the image 100% of the viewport width to the left
+    ease: "none" // No easing for constant speed
+});
